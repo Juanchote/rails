@@ -66,6 +66,7 @@
     <orderEntry type="library" scope="PROVIDED" name="turbolinks (v2.2.1, ruby-2.0.0-p195) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.39, ruby-2.0.0-p195) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.5.0, ruby-2.0.0-p195) [gem]" level="application" />
+    <orderEntry type="library" name="sass-stdlib" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />
