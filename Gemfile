@@ -8,6 +8,8 @@ gem 'mysql2'
 
 gem 'rspec-rails'
 
+gem 'capybara'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
