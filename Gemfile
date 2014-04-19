@@ -11,7 +11,9 @@ gem 'rspec-rails'
 gem 'guard-rspec', '2.5.0'
 
 gem 'rb-notifu', '0.0.4'
-gem 'wdm', '0.1.0'
+platforms :mswin do
+  gem "wdm", :group => [:development, :test]
+end
 
 gem 'spork-rails', '4.0.0'
 gem 'guard-spork', '1.5.0'
