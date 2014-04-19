@@ -1,63 +1,35 @@
 require 'spec_helper'
 
-describe "StaticPages" do
-  describe "GET /static_pages" do
+describe "Static pages" do
 
-    let(:base_title) { "HomePage" }
+  subject { page }
 
-    describe "Home Page" do
-      it "Home Page found" do
-        # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-        get static_pages_home_path
-        response.status.should be(200)
-      end
+  describe "Home page" do
+    before { visit root_path }
 
-      it "Home Page has Title" do
-        visit '/static_pages/home'
-        expect(page).to have_title("#{base_title}")
-      end
+    it { should have_content('Sample App') }
+    it { should have_title(full_title('')) }
+    it { should_not have_title('| Home') }
+  end
 
-      it "should not have a custom page title" do
-        visit '/static_pages/home'
-        expect(page).not_to have_title('| Home')
-      end
-    end
+  describe "Help page" do
+    before { visit help_path }
 
-    describe "Help Page" do
-      it "Help Page Found" do
-        # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-        get static_pages_help_path
-        response.status.should be(200)
-      end
+    it { should have_content('Help') }
+    it { should have_title(full_title('Help')) }
+  end
 
-      it "Help Page has Title" do
-        visit '/static_pages/help'
-        expect(page).to have_title("#{base_title} | Help")
-      end
-    end
+  describe "About page" do
+    before { visit about_path }
 
-    describe "Contact Page" do
-      it "ContactPate Found" do
-        get static_pages_contact_path
-        response.status.should be(200)
-      end
+    it { should have_content('About') }
+    it { should have_title(full_title('About Us')) }
+  end
 
-      it "ContactPage has Title" do
-        visit '/static_pages/contact'
-        expect(page).to have_title("#{base_title} | Contact")
-      end
-    end
+  describe "Contact page" do
+    before { visit contact_path }
 
-    describe "About page" do
-      it "Aboud Page Found" do
-        get static_pages_about_path
-        response.status.should be(200)
-      end
-
-      it "About Page has Title" do
-        visit '/static_pages/about'
-        expect(page).to have_title("#{base_title} | About")
-      end
-    end
+    it { should have_content('Contact') }
+    it { should have_title(full_title('Contact')) }
   end
 end
