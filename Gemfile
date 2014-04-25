@@ -23,6 +23,10 @@ gem 'bcrypt-ruby', '3.1.5'
 
 gem 'capybara'
 
+group :test do
+	gem 'factory_girl_rails', '4.4.0'
+end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 gem 'bootstrap-sass', '3.1.1'
