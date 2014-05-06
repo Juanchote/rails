@@ -11,10 +11,10 @@ describe "Authentication" do
 			before { click_button "Sign in" }
 
 			it { should have_title('Sign in') }
-			it { should have_selector('div.alert.alert-error') }
-		end
+      it { should have_selector('div.alert.alert-danger') }
+    end
 
-		describe "with valid information" do
+    describe "with valid information" do
 			let(:user) { FactoryGirl.create(:user) }
 			before do
 				fill_in "Email",    with: user.email.upcase
@@ -30,12 +30,12 @@ describe "Authentication" do
 
 		describe "after visiting another page" do
 			before { click_link "Home" }
-			it { should_not have_selector('div.alert.alert-error') }
-		end
+      it { should_not have_selector('div.alert.alert-danger') }
+    end
 
-		describe "after visiting another page" do
+    describe "after visiting another page" do
 			before { click_link "Home" }
-			it { should_not have_selector('div.alert.alert-error') }
-		end
-	end
+      it { should_not have_selector('div.alert.alert-danger') }
+    end
+  end
 end
