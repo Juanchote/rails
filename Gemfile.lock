@@ -173,6 +173,7 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
+    skeleton-rails (0.1.0)
     slop (3.5.0)
     spork (1.0.0rc4)
     spork (1.0.0rc4-x86-mingw32)
@@ -229,6 +230,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.2)
   sdoc
+  skeleton-rails
   spork-rails (= 4.0.0)
   sprockets (= 2.11.0)
   turbolinks

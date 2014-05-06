@@ -18,6 +18,7 @@ end
 gem 'spork-rails', '4.0.0'
 gem 'guard-spork', '1.5.0'
 gem 'childprocess', '0.3.6'
+gem 'skeleton-rails'
 
 gem 'bcrypt-ruby', '3.1.5'
 
