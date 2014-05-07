@@ -26,16 +26,21 @@ describe "Authentication" do
 			it { should have_link('Profile',     href: user_path(user)) }
 			it { should have_link('Sign out',    href: signout_path) }
 			it { should_not have_link('Sign in', href: signing_path) }
-		end
 
-		describe "after visiting another page" do
-			before { click_link "Home" }
-      it { should_not have_selector('div.alert.alert-danger') }
+      describe "remember token" do
+        before { user.save }
+        its(:remember_token) { should_not be_blank }
+      end
     end
 
     describe "after visiting another page" do
 			before { click_link "Home" }
-      it { should_not have_selector('div.alert.alert-danger') }
+      it { should_not have_selector('div.alert.alert-danger'), text: 'invalid' }
+    end
+
+    describe "after visiting another page" do
+			before { click_link "Home" }
+      it { should_not have_selector('div.alert.alert-danger'), text: 'invalid' }
     end
   end
 end
