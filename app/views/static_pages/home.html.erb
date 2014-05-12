@@ -1,14 +1,12 @@
 
 <div class="center jumbotron">
-    <h1>Welcome to the Sample App</h1>
+    <h2>Bienvenido a la página Web de</h2>
+
+    <h1>Juan Manuel Rodulfo Salcedo</h1>
 
     <h2>
-        This is the home page for the
-        <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-        sample application.
+        Web creada para la <%= link_to "Universidad Católica de Ávila", 'http://online.ucavila.es/' %>
     </h2>
 
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-primary btn-lg" %>
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
-
-<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>

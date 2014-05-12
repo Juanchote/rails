@@ -1,5 +1,38 @@
 <% provide(:title, 'Help') %>
 
-<h1>Static page Sample App</h1>
-<p>Find me in app/views/static_pages/help.html.erb</p>
+<h1>About Me</h1>
+<div id="container">
+    <div class="row">
+        <div class="col-md-2 center">
+            <img src=<%= asset_path('foto.jpg') %> class="img-thumbnail" alt="foto carné">
+        </div>
+        <div class="col-md-9">
+            <div id="h1">
+                <h1>Juan Manuel Rodulfo Salcedo</h1>
+            </div>
+            <div id="h2">
+                <h2>Desarrollador Java</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">Datos</div>
+                <div class="panel-body">
+                    <span class="fa fa-lg fa-envelope"><%= mail_to 'jmrodulfo@outlook.com' %></span>
+                    <br>
+                    <span class="fa fa-lg fa-skype">jmrodulfo </span>
+                    <br>
+                    <span class="fa fa-lg fa-twitter"> <%= link_to "@Juanxote", 'https://twitter.com/Juanxote' %></span>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <br>
+
+    <div>
+
+    </div>
+</div>

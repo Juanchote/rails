@@ -5,7 +5,7 @@ Railstutorial::Application.routes.draw do
   get 'about' => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
   get 'signup' => 'users#new'
-  get 'signing' => 'sessions#new'
+  get 'signin' => 'sessions#new'
   delete 'signout' => 'sessions#destroy'
 
   resources :microposts
