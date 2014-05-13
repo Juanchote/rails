@@ -8,17 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-responsive.css">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <script src="holder.js"></script>
     <%= csrf_meta_tags %>
     <%= render 'layouts/shim' %>
 </head>
 <body>
-    <%= render 'layouts/header' %>
+<%= render 'layouts/header' %>
 <div class="container">
     <%= yield %>
 </div>
-    <%= render 'layouts/footer' %>
-    <%= debug(params) if Rails.env.development? %>
+<%= render 'layouts/footer' %>
+<%= debug(params) if Rails.env.development? %>
 </body>
 </html>
